@@ -1,0 +1,97 @@
+<style>
+.contact-container {
+  background: rgb(255, 255, 255);
+}
+
+.contact-container * {
+  font-family: "Poppins", sans-serif;
+  color: rgb(41, 41, 41);
+}
+
+.contact-container h1 {
+  margin: 0 0 0.25em 0;
+  font-size: 2.75em;
+}
+
+.contact-wrapper {
+  max-width: 30%;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+  margin: 1em 0 1em 0;
+  padding: 1em;
+  border: solid 1px rgb(41, 41, 41);
+  color: rgb(41, 41, 41);
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form input[type="tel"]:focus,
+#contact-form input[type="button"],
+#contact-form textarea:focus {
+  outline: none;
+}
+
+.contact-label-wrapper {
+  display: run-in;
+  margin: 1em 0 1em 0;
+}
+
+#contact-form input[type="button"] {
+  width: 33%;
+  height: 3em;
+  min-width: 100px;
+  border: solid 1px rgb(41, 41, 41);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+#contact-form input[type="button"]:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-wrapper {
+    max-width: 80%;
+  }
+}
+</style>
+
+<div class="contact-container">
+  <h1>Kontakt</h1>
+  <div class="contact-wrapper">
+    <form id="contact-form" action="https://dem-it.de">
+      <input name="name" type="text" placeholder="Ihr Name" required />
+      <input name="email" type="email" placeholder="Ihre E-Mail" required />
+      <input name="tel" type="tel" placeholder="Ihre Telefonnummer" />
+      <textarea name="message" rows="8" cols="80" form="contact-form" placeholder="Ihre Nachricht"></textarea>
+      <div class="contact-label-wrapper">
+        <input name="check" type="checkbox" />
+        <label>Ich habe die <a href="#">Datenschutzerklärung</a> gelesen.</label>
+      </div>
+      <input name="send" type="button" value="Senden" />
+    </form>
+  </div>
+</div>

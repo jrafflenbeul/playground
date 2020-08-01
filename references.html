@@ -1,0 +1,127 @@
+<style>
+ .references-container {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+
+.references-flex-container {
+  display: flex;
+  flex-direction: rows;
+  justify-content: center;
+}
+
+ .reference-container {
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+   min-width: 300px;
+   height: 92px;
+   text-align: center;
+ }
+
+ .references-wrapper img {
+   max-height: 40px;
+   height: auto;
+   margin: 1.5em;
+   filter: grayscale(100%);
+   transition: all 0.2s;
+   -webkit-transition: all 0.2s;
+   -moz-transition: all 0.2s;
+   -ms-transition: all 0.2s;
+   -o-transition: all 0.2s;
+ }
+
+ .references-wrapper img:hover {
+   filter: grayscale(0%);
+   cursor: pointer;
+   transition: all 0.2s;
+   -webkit-transition: all 0.2s;
+   -moz-transition: all 0.2s;
+   -ms-transition: all 0.2s;
+   -o-transition: all 0.2s;
+ }
+
+ /*.reference-container:nth-child(2n) {
+   background: rgb(240, 240, 240);
+   border: solid 1px rgba(200, 200, 200, 0.4);
+ }*/
+
+ @media only screen and (max-width: 621px) {
+    .references-container {
+      text-align: center;
+    }
+ }
+</style>
+<div class="references-container">
+  <div class="references-flex-container">
+    <div class="references-wrapper">
+      <div class="reference-container">
+        <a href="#">
+          <img src="https://dem-it.de/wp-content/uploads/2019/12/TradeMax24-Logo-300x72.png" />
+        </a>
+      </div>
+      <div class="reference-container">
+        <a href="#">
+          <img src="https://dem-it.de/wp-content/uploads/2020/04/origifel_logo.png" />
+        </a>
+      </div>
+      <div class="reference-container">
+        <a href="#">
+          <img src="https://dem-it.de/wp-content/uploads/2020/04/auction-template-logo-dark.png" />
+        </a>
+      </div>
+      <div class="reference-container">
+        <a href="#">
+          <img src="https://dem-it.de/wp-content/uploads/2020/04/naava_logo.png" />
+        </a>
+      </div>
+      <div class="reference-container">
+        <a href="#">
+          <img src="https://dem-it.de/wp-content/uploads/2020/04/ecos_office_center.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var mutex = (window.innerWidth <= 620) ? 0 : 1;
+
+  function clear(references) {
+    for(var i = 0; references.length; i++) {
+      references[i].style.background = "transparent";
+      references[i].style.border = "none";
+    }
+  }
+
+  window.onresize = function() {
+    let references = document.getElementsByClassName("reference-container");
+    //console.log(window.innerWidth);
+    if(window.innerWidth >= 621) {
+      if(mutex == 0) {
+        clear(references);
+        mutex = 1;
+      }
+      for(var i = 1; i < references.length; i+=3) {
+        references[i].style.background = "rgb(240, 240, 240)";
+        references[i].style.border = "solid 1px rgba(200, 200, 200, 0.4)";
+        if(i == references.length - 2) {
+          references[i + 1].style.background = "rgb(240, 240, 240)";
+          references[i + 1].style.border = "solid 1px rgba(200, 200, 200, 0.4)";
+        }
+      }
+    } else if(window.innerWidth <= 620) {
+      if(mutex == 1) {
+        clear(references);
+        mutex = 0;
+      }
+      for(var i = 0; i < references.length; i++) {
+        if(i % 2) {
+          references[i].style.background = "rgb(240, 240, 240)";
+          references[i].style.border = "solid 1px rgba(200, 200, 200, 0.4)";
+        }
+      }
+    }
+  };
+</script>

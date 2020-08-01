@@ -1,0 +1,130 @@
+<style>
+  .timeline-container {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-size: 16px;
+  }
+
+  .timeline-container * {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .timeline-container strong {
+    font-weight: 600;
+  }
+
+  .timeline-container h1 {
+    letter-spacing: 1.5px;
+    color: rgb(41, 41, 41);
+    font-weight: 100;
+    font-size: 2.4em;
+  }
+
+  #timeline-content {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  /* Timeline */
+  .timeline {
+    border-left: 4px solid rgb(239, 92, 76);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgb(241, 241, 245);
+    color: rgb(41, 41, 41);
+    margin: 50px auto;
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 50px;
+    list-style: none;
+    text-align: left;
+    font-weight: 100;
+    max-width: 30%;
+  }
+
+  .timeline h1,
+  .timeline h2,
+  .timeline h3 {
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 1.4em;
+  }
+
+  .timeline .timeline-event {
+    border-bottom: 1px dashed rgba(41, 41, 41, 0.2);
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .timeline .timeline-event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .timeline .timeline-event:before,
+  .timeline .timeline-event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+
+  .timeline .timeline-event:before {
+    left: -217.5px;
+    color: rgba(255, 255, 255, 0.4);
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+  }
+
+  .timeline .timeline-event:after {
+    box-shadow: 0 0 0 4px rgb(239, 92, 76);
+    left: -57.85px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+    top: 5px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .timeline {
+      max-width: 80%;
+    }
+  }
+</style>
+<div class="timeline-container">
+  <div id="timeline-content">
+    <ul class="timeline">
+      <li class="timeline-event">
+        <h3>Anforderungen</h3>
+        <p>Unsere Reise beginnt mit der Ermittlung Ihres eigentlichen Reiseziels, also der Analyse Ihrer spezifischen Anforderungen. Auf welchem Ist-Zustand setzt Ihre Idee auf? Welches Softwaresystem stellen Sie sich im Soll-Zustand vor?
+Wir ermitteln mit Ihnen auf Ihrer Reise all Ihre Vorstellungen, Ideen und Wünsche an Ihr zukünftiges Softwareprodukt.
+</p>
+      </li>
+      <li class="timeline-event">
+        <h3>Entwurf</h3>
+        <p>Nach der Ermittlung Ihres Reiseziels werden mögliche Routen dorthin bestimmt. Hier entscheidet sich schon, ob die Reise mit uns an dieser Stelle endet oder weiter gehen soll. Wir erstellen für Sie verschiedene Routen in Form von Mockups bis hin zu ersten Prototypen, welche Ihnen einen ersten visuellen Eindruck Ihres Reiseziels, also Ihres finalen Softwareprodukts vermitteln sollen.</p>
+      </li>
+      <li class="timeline-event">
+        <h3>Entwicklung</h3>
+        <p>Sie haben sich für eine Route entschieden, nun geht es für uns unmittelbar daran, Sie über Ihre bestimmte Route zu Ihrem Reiseziel zu führen. Während des gesamten Entwicklungsprozesses stehen wir mit Ihnen in engem Kontakt und ermöglichen Ihnen bei Bedarf leichte Abweichungen von Ihrer Route. Wenn Ihnen also im Entwicklungsprozess weitere Funktionalitäten für Ihre Software einfallen, berechnen wir auf diesen Grundlagen Ihre Reiseroute neu und passen dementsprechend Kosten und Software dynamisch dazu an.</p>
+      </li>
+      <li class="timeline-event">
+        <h3>Testing</h3>
+        <p>Die Tests eines jeden Softwaresystems halten uns auf Kurs. Durch eingehendes Testing der von uns entwickelten Software wird das erreichen unseres Reiseziels gesichert. Wir bedienen uns an modernen und erprobten Techniken zum Testing und der damit verbundenen Versicherung Ihres Softwareprodukts.</p>
+      </li>
+      <li class="timeline-event">
+        <h3>Pflege & Wartung</h3>
+        <p>Unsere Reise neigt sich dem Ende zu, die Entwicklung Ihrer Software ist abgeschlossen und alle durchgeführten Tests ergeben keine Fehler. Je nachdem, ob Sie sich dafür entschieden haben, ob Ihre Reise kurzfristig oder langfristig ausfallen soll, bieten wir Ihnen die Möglichkeit, uns auch als Langstreckenpartner zu behalten. Ihr Softwareprodukt erhält dadurch von Zeit zu Zeit pflegende und an manch einer Stelle modernisierende Updates, sodass Sie immer mit der Zeit gehen. Dabei behalten wir immer Ihr ursprüngliches Reiseziel für Sie im Auge.</p>
+      </li>
+    </ul>
+  </div>
+</div>
